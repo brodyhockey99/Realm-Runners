@@ -1,0 +1,38 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "player_id": {
+      "type": "string",
+      "description": "Reference to player"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "win",
+        "loss",
+        "draw"
+      ]
+    },
+    "opponent_name": {
+      "type": "string"
+    },
+    "trophies_gained": {
+      "type": "number"
+    },
+    "modifier": {
+      "type": "string",
+      "description": "Realm modifier for this match"
+    },
+    "duration_seconds": {
+      "type": "number"
+    },
+    "damage_dealt": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "player_id",
+    "result"
+  ]
+}
