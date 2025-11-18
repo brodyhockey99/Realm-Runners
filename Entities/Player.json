@@ -1,0 +1,62 @@
+{
+  "name": "Player",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Player display name"
+    },
+    "rank": {
+      "type": "string",
+      "enum": [
+        "Stone",
+        "Bronze",
+        "Silver",
+        "Gold",
+        "Platinum",
+        "Diamond",
+        "Mythic"
+      ],
+      "default": "Stone"
+    },
+    "trophies": {
+      "type": "number",
+      "default": 0
+    },
+    "wins": {
+      "type": "number",
+      "default": 0
+    },
+    "losses": {
+      "type": "number",
+      "default": 0
+    },
+    "gold": {
+      "type": "number",
+      "default": 1000
+    },
+    "deck": {
+      "type": "array",
+      "description": "Array of 8 card IDs in active deck",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "hero_id": {
+      "type": "string",
+      "description": "Selected hero ID"
+    },
+    "unlocked_cards": {
+      "type": "array",
+      "description": "Card IDs player owns",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "required": [
+    "username"
+  ]
+}
